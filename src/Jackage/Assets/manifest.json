@@ -1,0 +1,104 @@
+[
+  {
+    "id": 1,
+    "is_supported": false,
+    "games": []
+  },
+  {
+    "id": 2,
+    "is_supported": false,
+    "games": []
+  },
+  {
+    "id": 3,
+    "is_supported": false,
+    "games": []
+  },
+  {
+    "id": 4,
+    "is_supported": false,
+    "games": []
+  },
+  {
+    "id": 5,
+    "is_supported": false,
+    "games": []
+  },
+  {
+    "id": 6,
+    "is_supported": false,
+    "games": [
+      {
+        "id": "Jokeboat",
+        "name": "Joke Boat",
+        "is_supported": false
+      },
+      {
+        "id": "PushTheButton",
+        "name": "Push The Button",
+        "is_supported": false
+      },
+      {
+        "id": "Ridictionary",
+        "name": "Dictionarium",
+        "is_supported": false
+      },
+      {
+        "id": "RoleModels",
+        "name": "Role Models",
+        "is_supported": false
+      },
+      {
+        "id": "TriviaDeath2",
+        "name": "Trivia Murder Party 2",
+        "is_supported": false
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "is_supported": true,
+    "games": [
+      {
+        "id": "BlankyBlank",
+        "name": "Blather 'Round",
+        "is_supported": true
+      },
+      {
+        "id": "Everyday",
+        "name": "The Devils in the Details",
+        "is_supported": false
+      },
+      {
+        "id": "JackboxTalks",
+        "name": "Talking Points",
+        "is_supported": false
+      },
+      {
+        "id": "Quiplash3",
+        "name": "Quiplash 3",
+        "is_supported": false
+      },
+      {
+        "id": "WorldChampions",
+        "name": "Champ'd Up'",
+        "is_supported": false
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "is_supported": false,
+    "games": []
+  },
+  {
+    "id": 9,
+    "is_supported": false,
+    "games": []
+  },
+  {
+    "id": 10,
+    "is_supported": false,
+    "games": []
+  }
+]

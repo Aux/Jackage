@@ -1,15 +1,19 @@
-﻿using System;
+﻿using Jackage.Jackbox;
+using System;
+using System.Collections.Generic;
 using System.Reactive.Linq;
 
 namespace Jackage.Views;
 
 public class MainWindowViewModel : ViewModelBase
 {
+    public IReadOnlyCollection<JackboxPack> Manifest { get; }
     public LibraryViewModel Library { get; set; }
 
-    public MainWindowViewModel()
+    public MainWindowViewModel(IReadOnlyCollection<JackboxPack> manifest)
     {
-        ActiveView = Library = new LibraryViewModel();
+        Manifest = manifest;
+        ActiveView = Library = new LibraryViewModel(Manifest);
     }
 
     private ViewModelBase _activeView;

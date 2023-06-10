@@ -9,8 +9,8 @@ namespace Jackage.Views;
 
 public class SettingsViewModel : ViewModelBase
 {
-    public const string Title = "Jackage Settings";
-    public const string Description = "";
+    public string Title => "Jackage Settings";
+    public string Description => "";
 
     public JackageOptions Options { get; }
 

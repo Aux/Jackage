@@ -7,7 +7,7 @@
              x:Class="Jackage.Views.MenuView">
 
 	<Panel>
-		<StackPanel Spacing="5" Margin="50" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" >
+		<StackPanel Spacing="5" Margin="50,50,50,40" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" >
 			<Button ToolTip.Tip="Settings" i:Attached.Icon="fa-solid fa-gear"
 					Command="{Binding $parent[Window].DataContext.CreateSettingsView}"
 					Width="50" Height="50" />
@@ -15,7 +15,7 @@
 					Width="50" Height="50" />
 		</StackPanel>
 
-		<StackPanel Spacing="5" Margin="50" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" >
+		<StackPanel Spacing="5" Margin="50,50,50,40" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" >
 			<Button ToolTip.Tip="GitHub Repository" i:Attached.Icon="fa-brands fa-github"
 					Command="{Binding OpenUrl}" CommandParameter="https://github.com/Aux/Jackage"
 					Width="50" Height="50" />
@@ -25,9 +25,9 @@
 		</StackPanel>
 
 		<StackPanel>
-			<Label Content="{Binding $parent[UserControl].Title}" FontSize="24"
+			<Label Content="{Binding Title}" FontSize="24"
 				   Margin="0,40,0,5" HorizontalAlignment="Center" VerticalAlignment="Top" />
-			<Label Content="{Binding $parent[UserControl].Description}" FontSize="16"
+			<Label Content="{Binding Description}" FontSize="16"
 				   Margin="0,5,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" />
 		</StackPanel>
 	</Panel>

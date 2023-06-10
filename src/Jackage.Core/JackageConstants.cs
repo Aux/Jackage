@@ -4,6 +4,8 @@ namespace Jackage;
 
 public static class JackageConstants
 {
+    public const string AssetsDirectory = "avares://Jackage/Assets/";
+
     /// <summary>
     ///     Default instance of the json serializer options for jet files.
     /// </summary>

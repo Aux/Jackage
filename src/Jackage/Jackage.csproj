@@ -11,6 +11,17 @@
     <AvaloniaResource Include="Assets\**" />
     <AvaloniaResource Remove="Assets\Images.axaml" />
     <None Remove=".gitignore" />
+    <None Remove="Assets\Images\6\Jokeboat-logo.webp" />
+    <None Remove="Assets\Images\6\PushTheButton-logo.webp" />
+    <None Remove="Assets\Images\6\Ridictionary-logo.webp" />
+    <None Remove="Assets\Images\6\RoleModels-logo.webp" />
+    <None Remove="Assets\Images\6\TriviaDeath2-logo.webp" />
+    <None Remove="Assets\Images\7\BlankyBlank-logo.webp" />
+    <None Remove="Assets\Images\7\Everyday-logo.webp" />
+    <None Remove="Assets\Images\7\JackboxTalks-logo.webp" />
+    <None Remove="Assets\Images\7\Quiplash3-logo.webp" />
+    <None Remove="Assets\Images\7\WorldChampions-logo.webp" />
+    <None Remove="Assets\Images\test.webp" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,7 +48,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Games\" />
     <Folder Include="Views\Jackbox\6\MurderParty2\" />
     <Folder Include="Views\Jackbox\7\BlatherRound\" />
     <Folder Include="Views\Jackbox\7\Quiplash3\" />
