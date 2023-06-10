@@ -11,48 +11,46 @@
 	<UserControl.Resources>
 		<j:BitmapAssetValueConverter x:Key="variableImage"/>
 	</UserControl.Resources>
-	
-	<Panel>
-		<StackPanel>
-			<Panel>
-				<v:MenuView />
-			</Panel>
 
-			<ItemsControl Grid.ColumnSpan="5" Items="{Binding Manifest}">
-				<ItemsControl.ItemTemplate>
-					<v:PackTemplateSelector>
-						
-						<DataTemplate x:Key="Enabled">
-							<Button Margin="10" Padding="5" Width="132" Height="176" HorizontalAlignment="Left" VerticalAlignment="Top"
-								ToolTip.Tip="{Binding Name}">
-								<Panel>
-									<Image Source="{Binding	CoverArtPath, Converter={StaticResource variableImage}}" />
-									<PathIcon Width="50" Height="50" Data="{StaticResource	add_square_regular}" />
-								</Panel>
-							</Button>
-						</DataTemplate>
-						
-						<DataTemplate x:Key="Disabled">
-							<Button Margin="10" Padding="5" Width="132" Height="176" HorizontalAlignment="Left" VerticalAlignment="Top"
-								ToolTip.Tip="{Binding Name}">
-								<Panel>
-									<Image Source="{Binding CoverArtPath, Converter={StaticResource variableImage}}" />
-									<PathIcon Width="50" Height="50" Data="{StaticResource lock_multiple_regular}" />
-									<Panel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Black" Opacity="100"/>
-								</Panel>
-							</Button>
-						</DataTemplate>
-						
-					</v:PackTemplateSelector>
-				</ItemsControl.ItemTemplate>
-				
-				<ItemsControl.ItemsPanel>
-					<ItemsPanelTemplate>
-						<WrapPanel Margin="30,0,30,15" />
-					</ItemsPanelTemplate>
-				</ItemsControl.ItemsPanel>
-				
-			</ItemsControl>
-		</StackPanel>
-	</Panel>
+	<StackPanel>
+		<Panel>
+			<v:MenuView />
+		</Panel>
+
+		<ItemsControl Grid.ColumnSpan="5" Items="{Binding Manifest}">
+			<ItemsControl.ItemTemplate>
+				<v:PackTemplateSelector>
+
+					<DataTemplate x:Key="Enabled">
+						<Button Margin="10" Padding="5" Width="132" Height="176" HorizontalAlignment="Left" VerticalAlignment="Top"
+							ToolTip.Tip="{Binding Name}">
+							<Panel>
+								<Image Source="{Binding	CoverArtPath, Converter={StaticResource variableImage}}" />
+								<PathIcon Width="50" Height="50" Data="{StaticResource	add_square_regular}" />
+							</Panel>
+						</Button>
+					</DataTemplate>
+
+					<DataTemplate x:Key="Disabled">
+						<Button Margin="10" Padding="5" Width="132" Height="176" HorizontalAlignment="Left" VerticalAlignment="Top"
+							ToolTip.Tip="{Binding Name}">
+							<Panel>
+								<Image Source="{Binding CoverArtPath, Converter={StaticResource variableImage}}" />
+								<PathIcon Width="50" Height="50" Data="{StaticResource lock_multiple_regular}" />
+								<Panel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Black" Opacity="100"/>
+							</Panel>
+						</Button>
+					</DataTemplate>
+
+				</v:PackTemplateSelector>
+			</ItemsControl.ItemTemplate>
+
+			<ItemsControl.ItemsPanel>
+				<ItemsPanelTemplate>
+					<WrapPanel Margin="30,0,30,15" />
+				</ItemsPanelTemplate>
+			</ItemsControl.ItemsPanel>
+
+		</ItemsControl>
+	</StackPanel>
 </UserControl>
