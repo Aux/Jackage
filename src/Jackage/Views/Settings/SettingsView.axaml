@@ -1,0 +1,30 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:v="clr-namespace:Jackage.Views"
+			 xmlns:i="clr-namespace:Projektanker.Icons.Avalonia;assembly=Projektanker.Icons.Avalonia"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Jackage.Views.SettingsView">
+
+	<StackPanel>
+		<Panel>
+			<v:MenuView Title="Jackage Settings" Description=""/>
+		</Panel>
+
+		<DockPanel Margin="30,0,30,15" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+			<StackPanel Spacing="15" Margin="30,0,30,15">
+				<TextBox Watermark="placeholder" Height="35" Width="250"/>
+				<TextBox Watermark="placeholder" Height="35" Width="250"/>
+				<TextBox Watermark="placeholder" Height="35" Width="250"/>
+				<TextBox Watermark="placeholder" Height="35" Width="250"/>
+			</StackPanel>
+			<StackPanel Spacing="5" Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+				<Button Content="Apply"
+						IsEnabled="{Binding HasChanges}" Command="{Binding Apply}"/>
+				<Button Content="Exit" Command="{Binding Exit}"/>
+			</StackPanel>
+		</DockPanel>
+	</StackPanel>
+	
+</UserControl>

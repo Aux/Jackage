@@ -1,0 +1,112 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:v="clr-namespace:Jackage.Views"
+			 xmlns:i="clr-namespace:Projektanker.Icons.Avalonia;assembly=Projektanker.Icons.Avalonia"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Jackage.Views.LibraryView">
+
+	<Panel>
+		<StackPanel>
+			<Panel>
+				<v:MenuView Title="Welcome to Jackage!" Description="Select a Party Pack below to get started."/>
+			</Panel>
+			
+			<StackPanel Margin="30,0,30,15" Spacing="25" Orientation="Horizontal" HorizontalAlignment="Center">
+				<Button Padding="5" Width="132" Height="176" HorizontalAlignment="Left" VerticalAlignment="Top"
+						ToolTip.Tip="Not Yet Supported">
+					<Panel>
+						<Image Source="/Assets/Images/pack1.png" />
+						<PathIcon Width="50" Height="50" Data="{StaticResource lock_multiple_regular}" />
+						<Panel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Black" Opacity="100"/>
+					</Panel>
+				</Button>
+
+				<Button Padding="5" Width="132" Height="176" HorizontalAlignment="Left" VerticalAlignment="Top"
+						ToolTip.Tip="Not Yet Supported">
+					<Panel>
+						<Image Source="/Assets/Images/pack2.png" />
+						<PathIcon Width="50" Height="50" Data="{StaticResource	lock_multiple_regular}" />
+						<Panel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Black" Opacity="100"/>
+					</Panel>
+				</Button>
+
+				<Button Padding="5" Width="132" Height="176" HorizontalAlignment="Left" VerticalAlignment="Top"
+						ToolTip.Tip="Not Yet Supported">
+					<Panel>
+						<Image Source="/Assets/Images/pack3.png" />
+						<PathIcon Width="50" Height="50" Data="{StaticResource	lock_multiple_regular}" />
+						<Panel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Black" Opacity="100"/>
+					</Panel>
+				</Button>
+
+				<Button Padding="5" Width="132" Height="176" HorizontalAlignment="Left" VerticalAlignment="Top"
+						ToolTip.Tip="Not Yet Supported">
+					<Panel>
+						<Image Source="/Assets/Images/pack4.png" />
+						<PathIcon Width="50" Height="50" Data="{StaticResource	lock_multiple_regular}" />
+						<Panel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Black" Opacity="100"/>
+					</Panel>
+				</Button>
+
+				<Button Padding="5" Width="132" Height="176" HorizontalAlignment="Left" VerticalAlignment="Top"
+						ToolTip.Tip="Not Yet Supported">
+					<Panel>
+						<Image Source="/Assets/Images/pack5.png" />
+						<PathIcon Width="50" Height="50" Data="{StaticResource	lock_multiple_regular}" />
+						<Panel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Black" Opacity="100"/>
+					</Panel>
+				</Button>
+			</StackPanel>
+
+			<StackPanel Margin="30,15,30,15" Spacing="25" Orientation="Horizontal" HorizontalAlignment="Center">
+				<Button Padding="5" Width="132" Height="176" HorizontalAlignment="Left" VerticalAlignment="Top"
+						ToolTip.Tip="Not Yet Supported">
+					<Panel>
+						<Image Source="/Assets/Images/pack6.png" />
+						<PathIcon Width="50" Height="50" Data="{StaticResource	lock_multiple_regular}" />
+						<Panel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Black" Opacity="100"/>
+					</Panel>
+				</Button>
+
+				<Button Padding="5" Width="132" Height="176" HorizontalAlignment="Left" VerticalAlignment="Top"
+						Command="{Binding OpenJackboxEditor}" CommandParameter="The Jackbox Party Pack 7"
+						ToolTip.Tip="Jackbox Party Pack 7" >
+					<Panel>
+						<Image Source="/Assets/Images/pack7.png" />
+						<PathIcon Width="50" Height="50" Data="{StaticResource	add_square_regular}" />
+					</Panel>
+				</Button>
+
+				<Button Padding="5" Width="132" Height="176" HorizontalAlignment="Left" VerticalAlignment="Top"
+						ToolTip.Tip="Not Yet Supported">
+					<Panel>
+						<Image Source="/Assets/Images/pack8.png" />
+						<PathIcon Width="50" Height="50" Data="{StaticResource	lock_multiple_regular}" />
+						<Panel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Black" Opacity="100"/>
+					</Panel>
+				</Button>
+
+				<Button Padding="5" Width="132" Height="176" HorizontalAlignment="Left" VerticalAlignment="Top"
+						ToolTip.Tip="Not Yet Supported">
+					<Panel>
+						<Image Source="/Assets/Images/pack9.png" />
+						<PathIcon Width="50" Height="50" Data="{StaticResource	lock_multiple_regular}" />
+						<Panel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Black" Opacity="100"/>
+					</Panel>
+				</Button>
+
+				<Button Padding="5" Width="132" Height="176" HorizontalAlignment="Left" VerticalAlignment="Top"
+						ToolTip.Tip="Not Yet Supported">
+					<Panel>
+						<Image Source="/Assets/Images/pack10.png" />
+						<PathIcon Width="50" Height="50" Data="{StaticResource	lock_multiple_regular}" />
+						<Panel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Black" Opacity="100"/>
+					</Panel>
+				</Button>
+			</StackPanel>
+		</StackPanel>
+	</Panel>
+	
+</UserControl>
