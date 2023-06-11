@@ -56,3 +56,7 @@ I don't own Jackbox 8, 9, and 10 so I can't do any testing on whether these are 
 - [ ] ~~Drawful~~ (not a text based game)
 - [ ] Word Spud
 - [ ] Lie Swatter
+
+
+## Attributing
+Logo is the [package emoji](https://openmoji.org/library/emoji-1F4E6/) designed by [OpenMoji](https://openmoji.org/) – the open-source emoji and icon project. License: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/#)

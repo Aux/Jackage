@@ -21,7 +21,7 @@
     <None Remove="Assets\Images\7\JackboxTalks-logo.webp" />
     <None Remove="Assets\Images\7\Quiplash3-logo.webp" />
     <None Remove="Assets\Images\7\WorldChampions-logo.webp" />
-    <None Remove="Assets\Images\test.webp" />
+    <None Remove="Assets\Images\logo.png" />
   </ItemGroup>
 
   <ItemGroup>
