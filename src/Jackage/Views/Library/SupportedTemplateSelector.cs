@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Jackage.Views;
 
-public class PackTemplateSelector : IDataTemplate
+public class SupportedTemplateSelector : IDataTemplate
 {
     public bool SupportsRecycling => false;
 
@@ -15,12 +15,12 @@ public class PackTemplateSelector : IDataTemplate
 
     public IControl Build(object data)
     {
-        return Templates[((JackboxPack)data).IsSupported ? "Enabled": "Disabled"].Build(data);
+        return Templates[((ISupported)data).IsSupported ? "Enabled": "Disabled"].Build(data);
     }
 
     public bool Match(object data)
     {
-        if (data is not JackboxPack pack)
+        if (data is not ISupported supported)
             return false;
 
         return true;

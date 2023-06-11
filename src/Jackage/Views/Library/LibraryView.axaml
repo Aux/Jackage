@@ -11,38 +11,50 @@
 	<UserControl.Resources>
 		<j:BitmapAssetValueConverter x:Key="variableImage"/>
 	</UserControl.Resources>
+	<UserControl.Styles>
+		<Style Selector="Button#SelectPack">
+			<Setter Property="Width" Value="132" />
+			<Setter Property="Height" Value="172" />
+			<Setter Property="Padding" Value="5" />
+			<Setter Property="Margin" Value="10" />
+			<Setter Property="HorizontalAlignment" Value="Center" />
+			<Setter Property="VerticalAlignment" Value="Top" />
+			<Setter Property="ToolTip.Tip" Value="{Binding Name}" />
+		</Style>
+		<Style Selector="PathIcon">
+			<Setter Property="Width" Value="50" />
+			<Setter Property="Height" Value="50" />
+		</Style>
+	</UserControl.Styles>
 
 	<StackPanel>
 		<Panel>
 			<v:MenuView />
 		</Panel>
 
-		<ItemsControl Grid.ColumnSpan="5" Items="{Binding Manifest}">
+		<ItemsControl Grid.ColumnSpan="5" Items="{Binding $parent[Window].DataContext.Manifest}">
 			<ItemsControl.ItemTemplate>
-				<v:PackTemplateSelector>
+				<v:SupportedTemplateSelector>
 
 					<DataTemplate x:Key="Enabled">
-						<Button Margin="10" Padding="5" Width="132" Height="176" HorizontalAlignment="Left" VerticalAlignment="Top"
-							ToolTip.Tip="{Binding Name}">
+						<Button Name="SelectPack" Command="{Binding $parent[Window].DataContext.CreateGamesView}" CommandParameter="{Binding}">
 							<Panel>
 								<Image Source="{Binding	CoverArtPath, Converter={StaticResource variableImage}}" />
-								<PathIcon Width="50" Height="50" Data="{StaticResource	add_square_regular}" />
 							</Panel>
 						</Button>
 					</DataTemplate>
 
 					<DataTemplate x:Key="Disabled">
-						<Button Margin="10" Padding="5" Width="132" Height="176" HorizontalAlignment="Left" VerticalAlignment="Top"
-							ToolTip.Tip="{Binding Name}">
+						<Button Name="SelectPack" IsEnabled="False">
 							<Panel>
 								<Image Source="{Binding CoverArtPath, Converter={StaticResource variableImage}}" />
-								<PathIcon Width="50" Height="50" Data="{StaticResource lock_multiple_regular}" />
+								<PathIcon Data="{StaticResource lock_multiple_regular}" />
 								<Panel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Black" Opacity="100"/>
 							</Panel>
 						</Button>
 					</DataTemplate>
 
-				</v:PackTemplateSelector>
+				</v:SupportedTemplateSelector>
 			</ItemsControl.ItemTemplate>
 
 			<ItemsControl.ItemsPanel>

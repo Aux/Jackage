@@ -9,7 +9,7 @@
 
 	<StackPanel>
 		<Panel>
-			<v:MenuView Title="Jackage Settings" Description=""/>
+			<v:MenuView />
 		</Panel>
 
 		<DockPanel Margin="30,0,30,15" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
@@ -22,7 +22,7 @@
 			<StackPanel Spacing="5" Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right">
 				<Button Content="Apply"
 						IsEnabled="{Binding HasChanges}" Command="{Binding Apply}"/>
-				<Button Content="Exit" Command="{Binding Exit}"/>
+				<Button Content="Cancel" Command="{Binding Cancel}"/>
 			</StackPanel>
 		</DockPanel>
 	</StackPanel>

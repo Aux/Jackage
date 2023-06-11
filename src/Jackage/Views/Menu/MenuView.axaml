@@ -6,21 +6,28 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Jackage.Views.MenuView">
 
+	<UserControl.Styles>
+		<Style Selector="Label">
+			
+		</Style>
+	</UserControl.Styles>
+	
 	<Panel>
-		<StackPanel Spacing="5" Margin="50,50,50,40" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" >
+		<StackPanel Spacing="5" Margin="50" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" >
 			<Button ToolTip.Tip="Settings" i:Attached.Icon="fa-solid fa-gear"
 					Command="{Binding $parent[Window].DataContext.CreateSettingsView}"
 					Width="50" Height="50" />
 			<Button ToolTip.Tip="Import Custom Package" i:Attached.Icon="fa-solid fa-file-import"
+					Command="{Binding $parent[Window].DataContext.CreateImportView}"
 					Width="50" Height="50" />
 		</StackPanel>
 
-		<StackPanel Spacing="5" Margin="50,50,50,40" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" >
+		<StackPanel Spacing="5" Margin="50" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" >
 			<Button ToolTip.Tip="GitHub Repository" i:Attached.Icon="fa-brands fa-github"
-					Command="{Binding OpenUrl}" CommandParameter="https://github.com/Aux/Jackage"
+					Command="{Binding $parent[Window].DataContext.OpenUrl}" CommandParameter="https://github.com/Aux/Jackage"
 					Width="50" Height="50" />
 			<Button ToolTip.Tip="Discord Support Server" i:Attached.Icon="fa-brands fa-discord"
-					Command="{Binding OpenUrl}" CommandParameter="https://discord.gg/t5vphPafdG"
+					Command="{Binding $parent[Window].DataContext.OpenUrl}" CommandParameter="https://discord.gg/t5vphPafdG"
 					Width="50" Height="50" />
 		</StackPanel>
 

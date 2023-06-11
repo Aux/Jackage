@@ -15,7 +15,7 @@ public class SettingsViewModel : ViewModelBase
     public JackageOptions Options { get; }
 
     public ReactiveCommand<Unit, Unit> Apply { get; }
-    public ReactiveCommand<Unit, Unit> Exit { get; }
+    public ReactiveCommand<Unit, Unit> Cancel { get; }
 
     public bool HasChanges { get; set; } = false;
 
@@ -24,7 +24,7 @@ public class SettingsViewModel : ViewModelBase
         this.WhenAnyPropertyChanged().Subscribe(_ => HasChanges = true);
 
         Apply = ReactiveCommand.Create(WriteChanges);
-        Exit = ReactiveCommand.Create(() => { });
+        Cancel = ReactiveCommand.Create(() => { });
     }
 
     public string backupDir;

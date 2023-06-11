@@ -1,9 +1,9 @@
 using Avalonia.Controls;
 
 namespace Jackage.Views;
-public partial class GamesView : UserControl
+public partial class ImportView : UserControl
 {
-    public GamesView()
+    public ImportView()
     {
         InitializeComponent();
     }
