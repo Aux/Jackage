@@ -62,13 +62,23 @@ public class MainWindowViewModel : ViewModelBase
         });
     }
 
+    private void CreatePackagesView(JackboxGame game)
+    {
+        CreateView(new PackagesViewModel(game), view =>
+        {
+            view.Back.Subscribe(_ => ActiveView = PreviousView);
+        });
+    }
+
     private void CreateView<T>(T view, Action<T> exit) where T : ViewModelBase
     {
         if (ActiveView is T)
             return;
 
         exit.Invoke(view);
-        PreviousView = ActiveView;
+
+        if (ActiveView is not SettingsViewModel && ActiveView is not ImportViewModel)
+            PreviousView = ActiveView;
         ActiveView = view;
     }
 }
