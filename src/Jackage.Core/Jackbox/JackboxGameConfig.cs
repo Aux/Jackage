@@ -1,6 +1,4 @@
-﻿using System.Text.Json.Serialization;
-
-namespace Jackage.Jackbox;
+﻿namespace Jackage.Jackbox;
 
 public class JackboxGameConfig
 {

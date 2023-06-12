@@ -1,20 +1,20 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net7.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>disable</Nullable>
-    <RootNamespace>Jackage</RootNamespace>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+		<RootNamespace>Jackage</RootNamespace>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Jackbox\6\MurderParty2\Models\" />
-    <Folder Include="Jackbox\7\Quiplash3\Models\" />
-  </ItemGroup>
+	<ItemGroup>
+		<Folder Include="Jackbox\6\MurderParty2\Models\" />
+		<Folder Include="Jackbox\7\Quiplash3\Models\" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="LiteDB" Version="5.0.16" />
-    <PackageReference Include="ZLogger" Version="1.7.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Gameloop.Vdf" Version="0.6.2" />
+		<PackageReference Include="LiteDB" Version="5.0.16" />
+	</ItemGroup>
 
 </Project>

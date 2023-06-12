@@ -12,6 +12,9 @@ public class JackboxPack : ISupported
     public IReadOnlyCollection<JackboxGame> Games { get; init; }
 
     [JsonIgnore]
+    public string InstallPath { get; set; } = null;
+
+    [JsonIgnore]
     public string Name => JackboxConstants.Name + " " + Id;
 
     [JsonIgnore]
