@@ -37,7 +37,7 @@
 				<v:SupportedTemplateSelector>
 
 					<DataTemplate x:Key="Enabled">
-						<Button Name="SelectPack" Command="{Binding CreateEditorView}" CommandParameter="{Binding}">
+						<Button Name="SelectPack" Command="{Binding $parent[Window].DataContext.CreatePackagesView}" CommandParameter="{Binding}">
 							<Panel>
 								<Image Source="{Binding	GameArtPath, Converter={StaticResource variableImage}}" />
 							</Panel>

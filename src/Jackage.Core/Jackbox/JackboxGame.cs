@@ -15,5 +15,8 @@ public class JackboxGame : ISupported
     public int PackId { get; set; } = -1;
 
     [JsonIgnore]
+    public string InstallPath { get; set; } = null;
+
+    [JsonIgnore]
     public string GameArtPath => $"Assets/Images/{PackId}/{Id}-logo.webp";
 }

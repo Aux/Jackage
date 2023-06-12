@@ -1,5 +1,6 @@
 ﻿using Jackage.Jackbox;
 using ReactiveUI;
+using System.IO;
 using System.Reactive;
 
 namespace Jackage.Views;
@@ -17,13 +18,11 @@ public class GamesViewModel : ViewModelBase
     {
         Pack = pack;
         foreach (var game in Pack.Games)
+        {
             game.PackId = Pack.Id;
+            game.InstallPath = Path.Combine(Pack.InstallPath, "games", game.Id);
+        }
 
         Back = ReactiveCommand.Create(() => { });
-    }
-
-    private void CreateEditorView(string gameId)
-    {
-
     }
 }
