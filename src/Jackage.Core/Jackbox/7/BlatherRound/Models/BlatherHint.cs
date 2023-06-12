@@ -1,6 +1,6 @@
 ﻿namespace Jackage.Jackbox.BlatherRound;
 
-public class BlatherDescriberWord
+public class BlatherHint
 {
     [JsonPropertyName("word")]
     public string Value { get; set; }

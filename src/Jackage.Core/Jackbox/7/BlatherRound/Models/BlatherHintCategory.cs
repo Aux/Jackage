@@ -3,7 +3,7 @@
 /// <summary>
 ///     Invidual items inside of BlankyBlankWordLists.jet
 /// </summary>
-public class BlatherDescriber
+public class BlatherHintCategory
 {
     /// <summary>
     ///     Unknown, value is always empty.
@@ -45,5 +45,5 @@ public class BlatherDescriber
     ///     
     /// </summary>
     [JsonPropertyName("words")]
-    public List<BlatherDescriberWord> Words { get; set; }
+    public List<BlatherHint> Words { get; set; }
 }

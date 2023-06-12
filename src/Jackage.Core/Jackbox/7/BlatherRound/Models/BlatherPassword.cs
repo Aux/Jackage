@@ -57,5 +57,5 @@ public class BlatherPassword
     ///     Additional describers to include in the hint pool.
     /// </summary>
     [JsonPropertyName("tailoredWords")]
-    public List<object> TailoredWords { get; set; }
+    public List<BlatherPasswordHint> TailoredWords { get; set; }
 }
