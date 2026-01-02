@@ -1,55 +1,56 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net7.0</TargetFramework>
-    <Nullable>disable</Nullable>
-    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
-    <ApplicationManifest>app.manifest</ApplicationManifest>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<!--If you are willing to use Windows/MacOS native APIs you will need to create 3 projects.
+			One for Windows with net7.0-windows TFM, one for MacOS with net7.0-macos and one with net7.0 TFM for Linux.-->
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>disable</Nullable>
+		<BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+		<ApplicationManifest>app.manifest</ApplicationManifest>
+		<Trimming>full</Trimming>
+		<PublishAot>True</PublishAot>
+		<AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+	</PropertyGroup>
+	<ItemGroup>
+		<Content Remove="C:\Users\Auxesis\.nuget\packages\sukiui\6.0.0-beta3\contentFiles\any\netstandard2.0\LICENSE" />
+		<Content Remove="C:\Users\Auxesis\.nuget\packages\sukiui\6.0.0-beta3\contentFiles\any\netstandard2.0\suki_photo.ico" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Remove="Assets\avalonia-logo.ico" />
+	</ItemGroup>
+	<ItemGroup>
+		<AvaloniaResource Include="Assets\avalonia-logo.ico" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <AvaloniaResource Include="Assets\**" />
-    <AvaloniaResource Remove="Assets\Images.axaml" />
-    <None Remove=".gitignore" />
-    <None Remove="Assets\Images\6\Jokeboat-logo.webp" />
-    <None Remove="Assets\Images\6\PushTheButton-logo.webp" />
-    <None Remove="Assets\Images\6\Ridictionary-logo.webp" />
-    <None Remove="Assets\Images\6\RoleModels-logo.webp" />
-    <None Remove="Assets\Images\6\TriviaDeath2-logo.webp" />
-    <None Remove="Assets\Images\7\BlankyBlank-logo.webp" />
-    <None Remove="Assets\Images\7\Everyday-logo.webp" />
-    <None Remove="Assets\Images\7\JackboxTalks-logo.webp" />
-    <None Remove="Assets\Images\7\Quiplash3-logo.webp" />
-    <None Remove="Assets\Images\7\WorldChampions-logo.webp" />
-    <None Remove="Assets\Images\logo.png" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Avalonia" Version="11.0.10" />
+		<PackageReference Include="Avalonia.Fonts.Inter" Version="11.0.10" />
+		<PackageReference Include="Avalonia.Desktop" Version="11.0.10" />
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
 
-  <ItemGroup>
-    <PackageReference Include="Avalonia" Version="0.10.21" />
-    <PackageReference Include="Avalonia.Desktop" Version="0.10.21" />
-    <PackageReference Include="Avalonia.Diagnostics" Version="0.10.21" />
-    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.21" />
-    <PackageReference Include="Projektanker.Icons.Avalonia.FontAwesome" Version="5.13.0" />
-    <PackageReference Include="XamlNameReferenceGenerator" Version="1.6.1" />
-  </ItemGroup>
+		<!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+		<PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.10" />
+		<PackageReference Include="SukiUI" Version="6.0.0-beta3" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <TrimmerRootDescriptor Include="Roots.xml" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Jackage.Core\Jackage.Core.csproj" />
+		<ProjectReference Include="..\Jackbox\Jackbox.csproj" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Jackage.Core\Jackage.Core.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<Compile Update="App.axaml.cs">
+			<DependentUpon>%(Filename)</DependentUpon>
+		</Compile>
+		<Compile Update="Views\MainView.axaml.cs">
+			<DependentUpon>%(Filename)</DependentUpon>
+		</Compile>
+		<Compile Update="Views\MainWindow.axaml.cs">
+			<DependentUpon>%(Filename)</DependentUpon>
+		</Compile>
+	</ItemGroup>
 
-  <ItemGroup>
-    <AvaloniaXaml Update="Assets\Images.axaml">
-      <SubType>Designer</SubType>
-    </AvaloniaXaml>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Views\Jackbox\6\MurderParty2\" />
-    <Folder Include="Views\Jackbox\7\BlatherRound\" />
-    <Folder Include="Views\Jackbox\7\Quiplash3\" />
-  </ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Views\Editors\" />
+	</ItemGroup>
 </Project>

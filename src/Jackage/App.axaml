@@ -1,13 +1,11 @@
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="using:Jackage"
-			 x:Class="Jackage.App">
-    <Application.DataTemplates>
-        <local:ViewLocator/>
-    </Application.DataTemplates>
+             xmlns:sukiUi="clr-namespace:SukiUI;assembly=SukiUI"
+             x:Class="Jackage.App"
+             RequestedThemeVariant="Default">
+             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
 
     <Application.Styles>
-        <FluentTheme Mode="Dark"/>
-		<StyleInclude Source="avares://Jackage/Assets/Images.axaml" />
-    </Application.Styles>
+		<sukiUi:SukiTheme ThemeColor="Blue"  />
+	</Application.Styles>
 </Application>

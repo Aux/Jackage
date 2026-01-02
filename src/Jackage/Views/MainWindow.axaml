@@ -1,37 +1,35 @@
-<Window xmlns="https://github.com/avaloniaui"
+<suki:SukiWindow xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Jackage.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-		xmlns:i="clr-namespace:Projektanker.Icons.Avalonia;assembly=Projektanker.Icons.Avalonia"
-        xmlns:v="clr-namespace:Jackage.Views"
+		xmlns:suki="clr-namespace:SukiUI.Controls;assembly=SukiUI"
+        xmlns:views="clr-namespace:Jackage.Views"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Jackage.Views.MainWindow"
-        mc:Ignorable="d"
-		
-        Title="Jackage"
-        Icon="/Assets/Images/logo.png"
-		d:DesignWidth="825" d:DesignHeight="557"
-		Width="825" Height="557" 
-		WindowStartupLocation="CenterScreen"
-		CanResize="False"
-		
-		ExtendClientAreaToDecorationsHint="True"
-        TransparencyLevelHint="AcrylicBlur"
-        Background="Transparent"
-		Content="{Binding ActiveView}">
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Jackage">
+	<suki:SukiSideMenu>
+		<suki:SukiSideMenu.Items>
 
-    <Design.DataContext>
-        <v:MainWindowViewModel/>
-    </Design.DataContext>
-	
-	<Panel>
-		<ExperimentalAcrylicBorder IsHitTestVisible="False">
-			<ExperimentalAcrylicBorder.Material>
-				<ExperimentalAcrylicMaterial
-					BackgroundSource="Digger"
-					TintColor="Black"
-					TintOpacity="1"
-					MaterialOpacity="0.65" />
-			</ExperimentalAcrylicBorder.Material>
-		</ExperimentalAcrylicBorder>
-	</Panel>
-</Window>
+			<suki:SukiSideMenuItem Header="Blather Round">
+				<suki:SukiSideMenuItem.Icon>
+					<!-- your icon content -->
+				</suki:SukiSideMenuItem.Icon>
+				<suki:SukiSideMenuItem.PageContent>
+					<views:MainView />
+				</suki:SukiSideMenuItem.PageContent>
+			</suki:SukiSideMenuItem>
+			
+			<suki:SukiSideMenuItem Header="Trivia Murder Party 2">
+				<suki:SukiSideMenuItem.Icon>
+					<!-- your icon content -->
+				</suki:SukiSideMenuItem.Icon>
+				<suki:SukiSideMenuItem.PageContent>
+					<views:MainView />
+				</suki:SukiSideMenuItem.PageContent>
+			</suki:SukiSideMenuItem>
+
+		</suki:SukiSideMenu.Items>
+	</suki:SukiSideMenu>
+</suki:SukiWindow>
