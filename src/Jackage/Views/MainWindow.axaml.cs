@@ -1,11 +1,12 @@
 using Avalonia.Controls;
 
-namespace Jackage.Views;
-
-public partial class MainWindow : Window
+namespace Jackage.Views
 {
-    public MainWindow()
+    public partial class MainWindow : Window
     {
-        InitializeComponent();
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
     }
 }

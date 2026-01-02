@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".gitignore" />
+    <File Path="LICENSE" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="src/Jackage.Core/Jackage.Core.csproj" Id="1b712ae5-8262-4171-b888-caac061a393c" />
+  <Project Path="src/Jackage/Jackage.csproj" />
+  <Project Path="src/Jackbox/Jackbox.csproj" Id="3d72191f-984b-4809-b9d4-fd1629fb012d" />
+</Solution>

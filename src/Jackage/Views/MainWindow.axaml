@@ -1,37 +1,20 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:Jackage.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-		xmlns:i="clr-namespace:Projektanker.Icons.Avalonia;assembly=Projektanker.Icons.Avalonia"
-        xmlns:v="clr-namespace:Jackage.Views"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Jackage.Views.MainWindow"
-        mc:Ignorable="d"
-		
-        Title="Jackage"
-        Icon="/Assets/Images/logo.png"
-		d:DesignWidth="825" d:DesignHeight="557"
-		Width="825" Height="557" 
-		WindowStartupLocation="CenterScreen"
-		CanResize="False"
-		
-		ExtendClientAreaToDecorationsHint="True"
-        TransparencyLevelHint="AcrylicBlur"
-        Background="Transparent"
-		Content="{Binding ActiveView}">
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Jackage">
 
     <Design.DataContext>
-        <v:MainWindowViewModel/>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
     </Design.DataContext>
-	
-	<Panel>
-		<ExperimentalAcrylicBorder IsHitTestVisible="False">
-			<ExperimentalAcrylicBorder.Material>
-				<ExperimentalAcrylicMaterial
-					BackgroundSource="Digger"
-					TintColor="Black"
-					TintOpacity="1"
-					MaterialOpacity="0.65" />
-			</ExperimentalAcrylicBorder.Material>
-		</ExperimentalAcrylicBorder>
-	</Panel>
+
+    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
 </Window>
