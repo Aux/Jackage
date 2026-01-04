@@ -9,34 +9,39 @@ public class TDQuestion
     public int Id { get; set; }
 
     [JsonPropertyName("text")]
-    public string Text { get; set; }
+    public string Question { get; set; }
+
+    [JsonPropertyName("questionAudio")]
+    public string QuestionCaptions { get; set; }
+
+    [JsonPropertyName("introAudio")]
+    public string IntroCaptions { get; set; }
 
     [JsonPropertyName("x")]
-    public bool X { get; set; }
+    public bool IsNsfw { get; set; }
 
     [JsonPropertyName("us")]
     public bool IsUS { get; set; }
 
-    [JsonPropertyName("hasIntro")]
-    public bool HasIntro { get; set; }
+    [JsonPropertyName("choices")]
+    public List<TDQuestionChoice> Choices { get; set; }
 
-    [JsonPropertyName("hasOutro")]
-    public bool HasOutro { get; set; }
-
-    [JsonPropertyName("hasPic")]
-    public bool HasPicture { get; set; }
+    // Unsure what this property is for/does, all default values for it are null
+    [JsonPropertyName("outro")]
+    public object HasOutro { get; set; }
 }
 
 /// <summary>
 /// 
 /// </summary>
-public class TDQuestionAnswer
+public class TDQuestionChoice
 {
-    [JsonPropertyName("controllerClass")]
-    public string ControllerClass { get; set; } = "";
+    // Only used during the post-win bomb minigame
+    [JsonPropertyName("correct")]
+    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
+    public string ControllerClass { get; set; } = null;
 
     [JsonPropertyName("correct")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingDefault)]
     public bool IsCorrect { get; set; }
 
     [JsonPropertyName("text")]

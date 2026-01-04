@@ -9,10 +9,10 @@ public class TDFinalRound
     public int Id { get; set; }
 
     [JsonPropertyName("text")]
-    public string Text { get; set; }
+    public string Subject { get; set; }
 
     [JsonPropertyName("x")]
-    public bool X { get; set; }
+    public bool IsNsfw { get; set; }
 
     [JsonPropertyName("choices")]
     public List<TDFinalRoundChoice> Choices { get; set; }
@@ -23,12 +23,12 @@ public class TDFinalRound
 /// </summary>
 public class TDFinalRoundChoice
 {
-    [JsonPropertyName("difficulty")]
-    public int Difficulty { get; set; }
-
     [JsonPropertyName("correct")]
     public bool IsCorrect { get; set; }
 
+    [JsonPropertyName("difficulty")]
+    public int Difficulty { get; set; }
+
     [JsonPropertyName("text")]
-    public string Text { get; set; }
+    public string Answer { get; set; }
 }

@@ -9,10 +9,10 @@ public class TDMindMeld
     public int Id { get; set; }
 
     [JsonPropertyName("text")]
-    public string Text { get; set; }
+    public string Subject { get; set; }
 
     [JsonPropertyName("x")]
-    public bool X { get; set; }
+    public bool IsNsfw { get; set; }
 
     [JsonPropertyName("us")]
     public bool IsUS { get; set; }
@@ -27,8 +27,8 @@ public class TDMindMeld
 public class TDMindMeldAnswer
 {
     [JsonPropertyName("answer")]
-    public string Value { get; set; }
+    public string Answer { get; set; }
 
     [JsonPropertyName("alt")]
-    public List<string> AlternateValues { get; set; }
+    public List<string> AcceptableAlternates { get; set; }
 }

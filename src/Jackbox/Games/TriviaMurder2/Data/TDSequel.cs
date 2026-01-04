@@ -11,11 +11,19 @@ public class TDSequel
     [JsonPropertyName("minSequel")]
     public int MinimumSequel { get; set; }
 
-    [JsonPropertyName("tag")]
-    public string Tag { get; set; }
+    // This is 0 for every default except 101414
+    [JsonPropertyName("generationJump")]
+    public int GenerationJump { get; set; } = 0;
+
+    // Is null for all defaults except one instance of 'REVERSE'
+    [JsonPropertyName("nameModifier")]
+    public string NameModifier { get; set; }
 
     [JsonPropertyName("playerNamePrefix")]
     public string PlayerNamePrefix { get; set; }
+
+    [JsonPropertyName("tag")]
+    public string Tag { get; set; }
 
     [JsonPropertyName("text")]
     public TrivialSequelText Text { get; set; }
@@ -27,13 +35,11 @@ public class TDSequel
 public class TrivialSequelText
 {
     [JsonPropertyName("main")]
-    public string Main { get; set; }
+    public string MainHeader { get; set; }
 
     [JsonPropertyName("sub")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string Sub { get; set; }
+    public string SubHeader { get; set; }
 
     [JsonPropertyName("lowerThird")]
-    [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
-    public string LowerThird { get; set; }
+    public string LowerThird { get; set; } = "lowerThird";
 }
